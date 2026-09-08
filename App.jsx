@@ -2858,5 +2858,12 @@ function HRView({ jobs, onUpdateImage }) {
 }
 
 function EmptyState({ text }) {
-  return <div className="flex items-center gap-2 rounded-lg border border-dashed border-neutral-800 p-4 text-sm text-neutral-500"><Eye size={14} /> {text}</div>;
+    return <div className="flex items-center gap-2 rounded-lg border border-dashed border-neutral-800 p-4 text-sm text-neutral-400">{text}</div>
+}
+
+// Tell React to render the main App component into our HTML layout
+const rootElement = document.getElementById('root');
+if (rootElement) {
+    const root = ReactDOM.createRoot(rootElement);
+    root.render(React.createElement(App || Object.values(window).find(f => typeof f === 'function' && f.name === 'App') || function() { return null; }));
 }
