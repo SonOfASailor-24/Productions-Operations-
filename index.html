@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Application</title>
-    <!-- This loads Tailwind CSS -->
+    <!-- Tailwind CSS -->
     <script src="https://tailwindcss.com"></script>
-    
-    <!-- This loads React libraries -->
+    <!-- React and ReactDOM -->
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    
-    <!-- This loads Babel to handle JSX compilation directly in the browser -->
+    <!-- Babel for compiling JSX -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Lucide Icons (Very common in Claude apps) -->
+    <script src="https://unpkg.com"></script>
 </head>
 <body class="bg-gray-100">
     <div id="root"></div>
+
+    <script type="text/babel">
+        // Make lucide icons globally accessible inside App.jsx
+        window.lucide = lucide;
+    </script>
     
-    <!-- Using text/babel compiles the file safely on your Vercel URL -->
+    <!-- Load your App code -->
     <script type="text/babel" src="/App.jsx"></script>
 </body>
 </html>
